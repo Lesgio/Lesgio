@@ -2,30 +2,93 @@
 <head>
   <title>Lesgio</title>
   <style>
- h1:{
-font-family: "Arial", "Helvetica", "sans-serif";
+ #header{
+font-family:arial;
+   font-variant:small-caps;
+   background-color:white;
+   color:black;
+  border:2px solid gray;
  }
-  h3:{
-font-family: "Arial", "Helvetica", "sans-serif";
-  }
-    ul:{
-font-family: "Arial, "Helvetica, "sans-serif";
+    ul{
+font-family:arial;
     }
-    li:{
-font-family: "Arial", "Helvetica", "sans-serif";
+
+    body{
+      background-color:black;
+      color:white;
     }
+
+   a:link{color:#00ff00; font-family:arial;}
+a:hover{border: 1px solid white; font-family:arial;}
+a:active{color:white; border: 1px dotted white; font-family:arial;}
+a:visited{color:#00ff00; font-family:arial;}
+
+h2{
+font-family:arial;
+}
+
+#ct{
+font-family:monospace;
+font-size:20;
+}
   </style>
+
+
+<script type="text/javascript"> 
+function display_c(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('display_ct()',refresh)
+}
+
+function display_ct() {
+var x = new Date()
+
+var month=(x.getMonth() +1).toString();
+month=month.length==1 ? 0+month : month;
+
+var dt=x.getDate().toString();
+dt=dt.length==1 ? 0+dt : dt;
+
+var x1=dt + "/" + month + "/" + x.getFullYear();
+
+
+var hours=x.getHours().toString()
+mhours=hours.length==1 ? 0+hours : hours;
+
+var minutes=x.getMinutes().toString()
+minutes=minutes.length==1 ? 0+minutes : minutes;
+
+var seconds=x.getSeconds().toString()
+seconds=seconds.length==1 ? 0+seconds : seconds;
+
+
+x1 = x1 + " - " +  hours+ ":" +  minutes + ":" +  seconds;
+document.getElementById('ct').innerHTML = x1;
+display_c();
+}
+</script>
+
+
+
   </head>
-  <body>
-    <h1>Lesgio</h1>
+  <body onload=display_ct();>
+
+<span id='ct'></span>
+
+    <h1 id="header">Lesgio</h1>
     <br/>
     <h3>
   <ul>
     <li>16y/o</li>
     <li>Best Friends: Bene, Xian, Flopie</li>
-    <li>likes Roblox</li>
+    <li>likes Roblox (User: <a href="https://www.roblox.com/users/985582320/profile">lesgio2</a>)</li>
     <li>catboy (nya~!)</li>
   </ul>
      </h3>
+<br/>
+    <h1 id="header">
+     Links
+    </h1>
+<a href="https://discord.com/users/740583577825312838" target="_blank" rel="noopener noreferrer"><img src="Discord.png" height="150"; width="150";></a>
   </body>
 </HTML>
