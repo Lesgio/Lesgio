@@ -5,19 +5,24 @@
 
   <style>
  #header{
-font-family:arial;
-   font-variant:small-caps;
+font-family:monospace;
+   
    background-color:white;
    color:black;
   border:2px solid gray;
+  width: 800px;
  }
     ul{
-font-family:arial;
+font-family:monospace;
     }
 
     body{
+      font-family: monospace;
       background-color:black;
       color:white;
+      margin: auto;
+      width: 45%;
+      margin-top: 10px;
     }
 
    a:link{color:#00ff00; font-family:arial;}
@@ -26,7 +31,7 @@ a:active{color:white; border: 1px dotted white; font-family:arial;}
 a:visited{color:#00ff00; font-family:arial;}
 
 h2{
-font-family:arial;
+font-family:monospace;
 }
 
 #ct{
@@ -35,31 +40,68 @@ font-size:20;
 }
 
 table{
-font-family:arial;
+font-family:monospace;
 border:2px solid gray;
 }
 
 
 #linkHeaders{
 padding:0px;
+font-family: arial;
 }
 
-a.nya{color:black; border: 0px}
-a.nya:hover{color:#FF57ED; border: 0px}
-a.bene:hover{color:#01D4FF; border: 0px}
-a.xian:hover{color:#FFEC01; border: 0px}
-a.flopie:hover{color:#ff8000; border: 0px}
+li{
+  font-family: monospace;
+  font-size: 20;
+}
 
-a.discord:hover{color:#5865f2; border: 0px}
-a.twitch:hover{color:#6441a5; border: 0px}
-a.yt:hover{color:red; border: 0px}
-a.roblox:hover{color:#AEBAC6; border: 0px}
+a.linksToSocials{font-family: monospace; font-size: 15;}
+
+a.nya{color:black; border: 0px; font-family:monospace;}
+a.nya:hover{color:#FF57ED; border: 0px; font-family:monospace;}
+a.bene:hover{color:#01D4FF; border: 0px; font-family:monospace;}
+a.xian:hover{color:#FFEC01; border: 0px; font-family:monospace;}
+a.flopie:hover{color:#ff8000; border: 0px; font-family:monospace;}
+
+a.discord:hover{color:#5865f2; border: 0px;}
+a.twitch:hover{color:#6441a5; border: 0px;}
+a.yt:hover{color:red; border: 0px;}
+a.roblox:hover{color:#AEBAC6; border: 0px;}
 
 a.catFace{color:white; border 0px}
 a.catFace:hover{color:black; border: 0px}
 
 iframe{
 position: fixed;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  border:3px solid rgb(255, 255, 255);
+  bottom: -50%;
+  left: 150%;
+  margin-left: 0px;
+  background-color:rgb(0, 0, 0);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
   </style>
@@ -112,9 +154,9 @@ display_c();
 
 <span id='ct'></span>
 
-    <h1 id="header">Lesgio <a class='catFace'>:3</a></h1>
-    <br/>
-    <h3 style=font-family:arial;>Things about me:</h3>
+    <h1 id="header">Lesgio <a class='catFace' style="font-family:monospace;">:3</a></h1>
+    
+    <h3 style="font-family:monospace; font-size:25;">Things about me:</h3>
     <h3>
   <ul>
     <li>16y/o</li>
@@ -122,8 +164,11 @@ display_c();
     <li>likes Roblox</li>
     <li>catboy <a class='nya'>nya~!</a></li>
 <br/>
-<li>Timezone: Europe/Berlin (Summer: CEST, UTC+02:00 / Winter: CET, UTC+01:00)</li>
+
   </ul>
+  <div style="font-size:20px;">Timezone: Europe/Berlin <div class="tooltip">🛈
+    <span class="tooltiptext">Summer: CEST, UTC+02:00 Winter: CET, UTC+01:00</span>
+</div></div>
      </h3>
     <h1 id="header">
      Links
@@ -137,12 +182,12 @@ display_c();
 		</tr>
 		<tr>
 			<td width="200";> <ul>
-                          <li> <a href="https://discord.com/users/740583577825312838" target="_blank" rel="noopener noreferrer">User</a> </li>
-                          <li> <a href="https://discord.gg/hKwRgamYVR" target="_blank" rel="noopener noreferrer">Server</a> </li> 
+                          <li> <a class="linksToSocials" href="https://discord.com/users/740583577825312838" target="_blank" rel="noopener noreferrer">User</a> </li>
+                          <li> <a class="linksToSocials" href="https://discord.gg/hKwRgamYVR" target="_blank" rel="noopener noreferrer">Server</a> </li> 
                         </ul> </td>
-                        <td width="200";> <ul> <li> <a href="https://twitch.com/lesgio3333" target="_blank" rel="noopener noreferrer">Account</a> </li> </ul> </td>
-                        <td width="200";> <ul> <li> <a href="https://www.youtube.com/channel/UCqYmgpKzn8fkAvbwezt8HUQ" target="_blank" rel="noopener noreferrer">Channel</a> </li> </ul> </td>
-                        <td width="200";> <ul> <li> <a href="https://www.roblox.com/users/985582320/profile" target="_blank" rel="noopener noreferrer">Account</a> </li> </ul> </td>
+                        <td width="200";> <ul> <li> <a class="linksToSocials" href="https://twitch.com/lesgio3333" target="_blank" rel="noopener noreferrer">Account</a> </li> </ul> </td>
+                        <td width="200";> <ul> <li> <a class="linksToSocials" href="https://www.youtube.com/channel/UCqYmgpKzn8fkAvbwezt8HUQ" target="_blank" rel="noopener noreferrer">Channel</a> </li> </ul> </td>
+                        <td width="200";> <ul> <li> <a class="linksToSocials" href="https://www.roblox.com/users/985582320/profile" target="_blank" rel="noopener noreferrer">Account</a> </li> </ul> </td>
 		</tr>
 	</table>
 <br/>
